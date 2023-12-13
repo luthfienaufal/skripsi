@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Jurusan</title>
+
+    <style>
+        body {
+            background-color: #f0f0f0; /* Warna latar belakang */
+            font-family: Arial, sans-serif; /* Jenis font */
+            color: #333; /* Warna teks utama */
+            margin: 0; /* Hilangkan margin pada body */
+            padding: 20px; /* Beri jarak antara konten dan tepi layar */
+            text-align: center; /* Pusatkan teks */
+        }
+
+        h1 {
+            color: #007bff; /* Warna judul */
+        }
+
+        form {
+            max-width: 400px; /* Lebar maksimum formulir */
+            margin: auto; /* Pusatkan formulir */
+            background-color: #fff; /* Warna latar formulir */
+            padding: 20px; /* Beri jarak pada formulir */
+            border-radius: 8px; /* Bulatan sudut formulir */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan formulir */
+        }
+
+        label {
+            display: block; /* Tampilkan label sebagai blok */
+            margin-top: 10px; /* Beri jarak atas pada setiap label */
+        }
+
+        select, input {
+            width: 100%; /* Lebar penuh pada input dan select */
+            padding: 10px; /* Beri jarak dalam pada input dan select */
+            margin-top: 5px; /* Beri jarak atas pada input dan select */
+            margin-bottom: 10px; /* Beri jarak bawah pada input dan select */
+            box-sizing: border-box; /* Hitung lebar dan tinggi elemen termasuk padding dan border */
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Warna latar belakang tombol submit */
+            color: #fff; /* Warna teks tombol submit */
+            cursor: pointer; /* Ubah kursor menjadi tangan ketika diarahkan ke tombol submit */
+        }
+
+        /* Gaya untuk elemen dengan id 'mata-pelajaran-ipa' atau 'mata-pelajaran-ips' */
+        #mata-pelajaran-ipa, #mata-pelajaran-ips {
+            display: none; /* Sembunyikan elemen secara default */
+        }
+    </style>
+</head>
+<body>
+    <h1>Rekomendasi Jurusan</h1>
+    
+    <form method="POST" action="/">
+        <label for="jurusan">Pilih Jurusan:</label>
+        <select name="jurusan" id="jurusan">
+            <option value="Pilih Jurusan">--Pilih Jurusan--</option>
+            <option value="IPA">IPA</option>
+            <option value="IPS">IPS</option>
+        </select>
+
+        <div id="mata-pelajaran-ipa">
+            <label for="biologi">Nilai Biologi:</label>
+            <input type="number" name="biologi" id="biologi">
+    
+            <label for="fisika">Nilai Fisika:</label>
+            <input type="number" name="fisika" id="fisika">
+            
+            <label for="kimia">Nilai Kimia:</label>
+            <input type="number" name="kimia" id="kimia">
+    
+            <label for="matematika">Nilai Matematika:</label>
+            <input type="number" name="matematika" id="matematika">
+        </div>
+
+        <div id="mata-pelajaran-ips">
+            <label for="sosiologi">Nilai Sosiologi:</label>
+            <input type="number" name="sosiologi" id="sosiologi">
+        
+            <label for="ekonomi">Nilai Ekonomi:</label>
+            <input type="number" name="ekonomi" id="ekonomi">
+        
+            <label for="sejarah">Nilai Sejarah:</label>
+            <input type="number" name="sejarah" id="sejarah">
+        
+            <label for="geografi">Nilai Geografi:</label>
+            <input type="number" name="geografi" id="geografi">
+        
+            <label for="matematika_ips">Nilai Matematika:</label>
+            <input type="number" name="matematika_ips" id="matematika_ips">
+        </div>        
+
+        <input type="submit" value="Rekomendasikan Jurusan">
+        <a class="button" href="/menu">Kembali Ke Menu</a>
+    </form>
+
+    <script>
+        document.getElementById('jurusan').addEventListener('change', function () {
+            var selectedJurusan = this.value;
+            document.getElementById('mata-pelajaran-ipa').style.display = selectedJurusan === 'IPA' ? 'block' : 'none';
+            document.getElementById('mata-pelajaran-ips').style.display = selectedJurusan === 'IPS' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

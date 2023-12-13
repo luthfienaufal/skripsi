@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Rekomendasi Jurusan</title>
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Warna latar belakang */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Jenis font */
+            color: #343a40; /* Warna teks utama */
+            margin: 0; /* Hilangkan margin pada body */
+            padding: 20px; /* Beri jarak antara konten dan tepi layar */
+            text-align: center; /* Pusatkan teks */
+        }
+
+        h1 {
+            color: #007bff; /* Warna judul */
+        }
+
+        p {
+            font-size: 18px; /* Ukuran font teks */
+            margin-bottom: 20px; /* Beri jarak bawah pada teks */
+        }
+
+        a {
+            display: inline-block; /* Tampilkan sebagai blok */
+            padding: 10px 20px; /* Beri jarak dalam pada link */
+            text-decoration: none; /* Hapus dekorasi hyperlink */
+            background-color: #007bff; /* Warna latar belakang link */
+            color: #fff; /* Warna teks link */
+            border-radius: 5px; /* Bulatan sudut link */
+            transition: background-color 0.3s ease; /* Transisi warna latar belakang dengan durasi 0.3 detik */
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Warna latar belakang saat dihover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Hasil Rekomendasi Jurusan</h1>
+
+    {% if recommended_major %}
+    <p>Rekomendasi Jurusan: {{ recommended_major }}</p>
+    {% else %}
+    <p>Belum ada rekomendasi jurusan yang diberikan.</p>
+    {% endif %}
+
+    <a href="/">Kembali ke Halaman Utama</a>
+</body>
+</html>

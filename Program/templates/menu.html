@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Warna latar belakang */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Jenis font */
+            color: #343a40; /* Warna teks utama */
+            margin: 0; /* Hilangkan margin pada body */
+            padding: 20px; /* Beri jarak antara konten dan tepi layar */
+            text-align: center; /* Pusatkan teks */
+        }
+
+        h1 {
+            color: #007bff; /* Warna judul */
+        }
+
+        .button-container {
+            display: flex; /* Tampilkan dalam satu baris */
+            justify-content: center; /* Pusatkan tombol */
+            margin-top: 20px; /* Beri jarak atas pada container tombol */
+        }
+
+        .button {
+            margin: 0 10px; /* Beri jarak antar tombol */
+        }
+
+        a {
+            display: inline-block; /* Tampilkan sebagai blok */
+            padding: 10px 20px; /* Beri jarak dalam pada link */
+            text-decoration: none; /* Hapus dekorasi hyperlink */
+            background-color: #007bff; /* Warna latar belakang link */
+            color: #fff; /* Warna teks link */
+            border-radius: 5px; /* Bulatan sudut link */
+            transition: background-color 0.3s ease; /* Transisi warna latar belakang dengan durasi 0.3 detik */
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Warna latar belakang saat dihover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Aplikasi Rekomendasi Jurusan</h1>
+
+    <div class="button-container">
+        <a class="button" href="/">Rekomendasi Jurusan</a>
+        <a class="button" href="/penghitungan">Penghitungan</a>
+        <a class="button" href="/rekomendasi">Data Rekomendasi</a>
+    </div>
+</body>
+</html>
